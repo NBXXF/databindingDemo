@@ -3,9 +3,24 @@
 
     <data>
 
+        <import type="com.xuan.asange.databindingdemo.User" />
+
+
+        <import type="com.xuan.asange.databindingdemo.BuildConfig" />
+
+        <import type="com.xuan.asange.databindingdemo.StringUtils" />
+
         <variable
             name="user"
-            type="com.xuan.asange.databindingdemo.User" />
+            type="User" />
+
+        <variable
+            name="s"
+            type="String" />
+
+        <variable
+            name="isMan"
+            type="Boolean" />
     </data>
 
     <LinearLayout
@@ -22,6 +37,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{String.valueOf(user.age)}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{s}" />
+
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="@{isMan}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{BuildConfig.VERSION_NAME}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{StringUtils.getVersionName()}" />
     </LinearLayout>
 
 </layout>
